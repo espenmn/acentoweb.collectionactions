@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="acentoweb.collectionactions.collection_copy"
+        title="CollectionCopy"
+        description="Adds option for copying all items to folder selected in field"
+        provides=".collection_copy.ICollectionCopy"
+        factory=".collection_copy.CollectionCopy"
+        marker=".collection_copy.ICollectionCopyMarker"
+        />
+
+
+    <plone:behavior
         name="acentoweb.collectionactions.collection_move"
         title="CollectionMove"
         description="Adds option for moving all items to folder selected in field"
