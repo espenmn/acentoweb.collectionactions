@@ -1,0 +1,5 @@
+===========================
+acentoweb.collectionactions
+===========================
+
+User documentation
