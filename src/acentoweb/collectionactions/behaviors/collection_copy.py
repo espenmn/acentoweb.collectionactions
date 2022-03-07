@@ -9,6 +9,10 @@ from zope.component import adapter
 from zope.interface import Interface
 from zope.interface import implementer
 from zope.interface import provider
+from z3c.relationfield.schema import RelationChoice
+from z3c.relationfield.schema import RelationList
+from plone.app.z3cform.widget import RelatedItemsFieldWidget
+from plone.app.vocabularies.catalog import CatalogSource
 
 
 class ICollectionCopyMarker(Interface):
@@ -19,11 +23,13 @@ class ICollectionCopy(model.Schema):
     """
     """
 
-    project = schema.TextLine(
-        title=_(u'Project'),
-        description=_(u'Give in a project name'),
-        required=False,
+    project = RelationChoice(
+         title=_(u'linked_folder'),
+         description=_(u'Folder to move items to'),
+         required=False,
+         vocabulary='plone.app.vocabularies.Catalog',
     )
+
 
 
 @implementer(ICollectionCopy)
