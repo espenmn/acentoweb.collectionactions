@@ -29,7 +29,7 @@ class ICollectionMove(model.Schema):
     """
 
     linked_folder =  RelationChoice(
-         title=_(u'linked_folder'),
+         title=_(u'Linked Move to Folder'),
          description=_(u'Folder to move items to'),
          required=False,
          vocabulary='plone.app.vocabularies.Catalog',

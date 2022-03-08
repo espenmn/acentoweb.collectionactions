@@ -18,5 +18,23 @@
         </property>
         <property name="visible">True</property>
       </object>
+
+      <object name="acentoweb_copy" meta_type="CMF Action"
+          i18n:domain="acentoweb.collectionactions">
+          <property name="title" i18n:translate="">Copy items to folder</property>
+        <property name="description"
+           i18n:translate="">Copy all items to folder specified here</property>
+        <property
+           name="url_expr">string:${object_url}/@@acentoweb_collection_object_copy</property>
+        <property name="link_target"></property>
+        <property name="icon_expr"></property>
+        <property
+           name="available_expr">python:object.restrictedTraverse(&#x27;@@plone_interface_info&#x27;).provides(&#x27;acentoweb.collectionactions.behaviors.collection_copy.ICollectionCopyMarker&#x27;)</property>
+        <property name="permissions">
+          <element value="Copy or Move"/>
+        </property>
+        <property name="visible">True</property>
+      </object>
+
   </object>
 </object>

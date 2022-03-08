@@ -5,6 +5,7 @@ from plone import schema
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
 from plone.supermodel import model
+from plone.autoform import directives
 from zope.component import adapter
 from zope.interface import Interface
 from zope.interface import implementer
@@ -23,9 +24,9 @@ class ICollectionCopy(model.Schema):
     """
     """
 
-    project = RelationChoice(
-         title=_(u'linked_folder'),
-         description=_(u'Folder to move items to'),
+    linked_copy_folder =  RelationChoice(
+         title=_(u'Linked Copy folder'),
+         description=_(u'Folder to copy items to'),
          required=False,
          vocabulary='plone.app.vocabularies.Catalog',
     )
@@ -39,11 +40,11 @@ class CollectionCopy(object):
         self.context = context
 
     @property
-    def project(self):
-        if hasattr(self.context, 'project'):
-            return self.context.project
+    def linked_copy_folder(self):
+        if hasattr(self.context, 'linked_copy_folder'):
+            return self.context.linked_copy_folder
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @linked_copy_folder.setter
+    def linked_copy_folder(self, value):
+        self.context.linked_copy_folder = value
