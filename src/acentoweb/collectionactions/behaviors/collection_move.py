@@ -35,6 +35,16 @@ class ICollectionMove(model.Schema):
          vocabulary='plone.app.vocabularies.Catalog',
     )
 
+    # PATTERN options might be a workaround multilingual sites
+    directives.widget(
+          'linked_folder',
+          RelatedItemsFieldWidget,
+          pattern_options={
+              'selectableTypes': ['Folder'],
+              #pattern_options=make_relation_root_path,
+          },
+     )
+
 
 
 @implementer(ICollectionMove)

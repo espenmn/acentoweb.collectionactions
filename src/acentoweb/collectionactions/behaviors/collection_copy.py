@@ -31,6 +31,15 @@ class ICollectionCopy(model.Schema):
          vocabulary='plone.app.vocabularies.Catalog',
     )
 
+    directives.widget(
+          'linked_copy_folder',
+          RelatedItemsFieldWidget,
+          pattern_options={
+              'selectableTypes': ['Folder'],
+              #pattern_options=make_relation_root_path,
+          },
+     )
+
 
 
 @implementer(ICollectionCopy)
