@@ -66,7 +66,7 @@ class CollectionMove(BrowserView):
             for item in  context.restrictedTraverse('@@contentlisting')():
                 try:
                     api.content.move(source=item.getObject(), target=to_folder)
-                    messages.add('Moved item: ' + item.id, type="info")
+                    messages.add('Moved item: ' + item.id + ' to folder: ' + to_folder.Title(), type="info")
                 except KeyError:
                     messages.add(u"Folder does not exist", type="warning")
 
@@ -89,7 +89,7 @@ class CollectionCopy(BrowserView):
             for item in  context.restrictedTraverse('@@contentlisting')():
                 try:
                     api.content.copy(source=item.getObject(), target=to_folder)
-                    messages.add('Copied item: ' + item.id, type="info")
+                    messages.add('Copied item: ' + item.id + ' to folder: ' + to_folder.Title(), type="info")
                 except KeyError:
                     messages.add(u"Folder does not exist", type="warning")
 
