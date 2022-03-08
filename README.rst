@@ -11,28 +11,9 @@ Tell me what your product does
 Features
 --------
 
-- Can be bullet points
+- Adds behaviors to Collection so you can move or copy all items to a folder.
 
 
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
 
 
 Installation
@@ -54,17 +35,15 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/acentoweb.collectionactions/issues
-- Source Code: https://github.com/collective/acentoweb.collectionactions
-- Documentation: https://docs.plone.org/foo/bar
+- Issue Tracker: https://github.com/espenmn/acentoweb.collectionactions/issues
+- Source Code: https://github.com/espenmn/acentoweb.collectionactions
+
 
 
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
-
+If you are having issues, please let us know (espen@medialog.no)
 
 License
 -------
